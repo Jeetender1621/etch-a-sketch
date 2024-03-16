@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: red;
+}
+
+h1{
+    margin-top: 60px;
+    align-self: center;
+    font-size: 30px;
+    padding: 20px;
+    background-color:black;
+    color: aliceblue;
+}
+
+.main-container {
+    align-self: center;
+    width: 90%; /* Adjust the width percentage as needed */
+    max-width: 960px; /* Set a maximum width if necessary */
+    height: 50vh; /* Set the height using viewport height (50% of the viewport height) */
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.user-choice{
+    background-color: green;
+    color: white;
+    align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    border : 2px solid white
+}
+
