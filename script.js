@@ -1,5 +1,6 @@
 const mainContainer = document.querySelector('.main-container');
 const userChoiceGrid = document.querySelector('.user-choice');
+let isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
 gridCreation(); //default 16x16 Grid
 
 function gridCreation(userInput =16) {
@@ -32,10 +33,16 @@ function addHoverEffect() {
     const gridDivs = document.querySelectorAll('.div-grid');
 
     gridDivs.forEach(div => {
-        div.addEventListener('mouseenter', () => {
-            div.style.backgroundColor = getRandomColor(); // Change the background color on hover
-        });
-    })
+        if (isTouchDevice) {
+            div.addEventListener('touchstart', () => {
+                div.style.backgroundColor = getRandomColor(); // Change the background color on touchstart
+            });
+        } else {
+            div.addEventListener('mouseenter', () => {
+                div.style.backgroundColor = getRandomColor(); // Change the background color on hover
+            });
+        }
+    });
 }
 
 
