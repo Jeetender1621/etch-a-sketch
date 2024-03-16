@@ -34,7 +34,7 @@ function addHoverEffect() {
 
     gridDivs.forEach(div => {
         if (isTouchDevice) {
-            div.addEventListener('touchstart', () => {
+            div.addEventListener('touchmove', () => {
                 div.style.backgroundColor = getRandomColor(); // Change the background color on touchstart
             });
         } else {
